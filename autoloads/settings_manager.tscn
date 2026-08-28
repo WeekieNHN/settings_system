@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://1oifp4vsksr3"]
+
+[ext_resource type="Script" uid="uid://cdsd8bo82ivyl" path="res://addons/settings/autoloads/settings_manager.gd" id="1_qdeqy"]
+
+[node name="SettingsManager" type="CanvasLayer" unique_id=1432433997]
+script = ExtResource("1_qdeqy")
