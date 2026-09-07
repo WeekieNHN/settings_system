@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://ccy0mebtlbrlf"]
 
-[ext_resource type="Script" uid="uid://dyixounqlnh7e" path="res://addons/settings/settings_panel/settings_panel.gd" id="1_ddwjx"]
-[ext_resource type="PackedScene" uid="uid://cpl5or8y8nhbn" path="res://addons/settings/settings_panel/display_settings/display_mode/display_mode.tscn" id="2_tix1s"]
-[ext_resource type="PackedScene" uid="uid://of4dhqxt8byl" path="res://addons/settings/settings_panel/display_settings/resolution/resolution.tscn" id="3_645up"]
+[ext_resource type="Script" uid="uid://dyixounqlnh7e" path="res://addons/settings_system/settings_panel/settings_panel.gd" id="1_ddwjx"]
+[ext_resource type="PackedScene" uid="uid://cpl5or8y8nhbn" path="res://addons/settings_system/settings_panel/display_settings/display_mode/display_mode.tscn" id="2_tix1s"]
+[ext_resource type="PackedScene" uid="uid://of4dhqxt8byl" path="res://addons/settings_system/settings_panel/display_settings/resolution/resolution.tscn" id="3_645up"]
 
 [node name="SettingsPanel" type="Control" unique_id=1466188809]
 custom_minimum_size = Vector2(720, 480)
@@ -120,6 +120,24 @@ layout_mode = 2
 
 [node name="DisplayMode" parent="VBoxContainer/TabContainer/Display/MarginContainer/ScrollContainer/MarginContainer/SettingList/MarginContainer/DisplaySettings" unique_id=2122326176 instance=ExtResource("2_tix1s")]
 layout_mode = 2
+
+[node name="Screen" type="HBoxContainer" parent="VBoxContainer/TabContainer/Display/MarginContainer/ScrollContainer/MarginContainer/SettingList/MarginContainer/DisplaySettings" unique_id=3388323]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/TabContainer/Display/MarginContainer/ScrollContainer/MarginContainer/SettingList/MarginContainer/DisplaySettings/Screen" unique_id=416801669]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Screen"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/TabContainer/Display/MarginContainer/ScrollContainer/MarginContainer/SettingList/MarginContainer/DisplaySettings/Screen" unique_id=748503826]
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 2
+popup/item_0/text = "Screen 0"
+popup/item_0/id = 0
+popup/item_1/text = "Screen 1"
+popup/item_1/id = 1
 
 [node name="Resolution" parent="VBoxContainer/TabContainer/Display/MarginContainer/ScrollContainer/MarginContainer/SettingList/MarginContainer/DisplaySettings" unique_id=1706360175 instance=ExtResource("3_645up")]
 layout_mode = 2

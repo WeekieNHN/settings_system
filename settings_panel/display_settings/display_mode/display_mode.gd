@@ -25,27 +25,6 @@ func on_apply() -> void:
 			false
 		)
 
-
-
-	'''
-	if currentValue == "Windowed":
-		# Set the resolution to 80% if the resolution setting doesnt exist
-		if not ParentRef.ELEMENT_REFERENCE_TABLE_.has("Resolution"):
-			adjust_resolution(0.8)
-			return
-		
-		# Apply the selected resolution manually if it has not been changed
-		if not ParentRef.changedElements_.has("Resolution"):
-			# Resolution change has to be delayed by at least 2 frames.
-			# Otherwise height of the window will be off by a bit.
-			await get_tree().process_frame
-			await get_tree().process_frame
-			# Apply the resolution settings manually
-			ParentRef.ELEMENT_REFERENCE_TABLE_["Resolution"]._apply_settings()
-	'''
-
-
-
 func load_setting() -> void:
 	super()
 	# Match the current display mode
