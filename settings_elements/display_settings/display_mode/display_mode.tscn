@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cpl5or8y8nhbn"]
 
-[ext_resource type="Script" uid="uid://bebtpjy6rccw2" path="res://addons/settings/settings_panel/display_settings/display_mode/display_mode.gd" id="1_dcicr"]
+[ext_resource type="Script" uid="uid://bebtpjy6rccw2" path="res://addons/settings_system/settings_elements/display_settings/display_mode/display_mode.gd" id="1_dcicr"]
 
 [node name="DisplayMode" type="HBoxContainer" unique_id=2122326176]
 anchors_preset = 15
@@ -10,6 +10,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_dcicr")
+DEFAULT_VALUE = "Fullscreen"
 
 [node name="Label" type="Label" parent="." unique_id=1880191842]
 layout_mode = 2

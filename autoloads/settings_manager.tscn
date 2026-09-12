@@ -1,6 +1,16 @@
 [gd_scene format=3 uid="uid://1oifp4vsksr3"]
 
-[ext_resource type="Script" uid="uid://cdsd8bo82ivyl" path="res://addons/settings/autoloads/settings_manager.gd" id="1_qdeqy"]
+[ext_resource type="Script" uid="uid://cdsd8bo82ivyl" path="res://addons/settings_system/autoloads/settings_manager.gd" id="1_qdeqy"]
+[ext_resource type="Script" uid="uid://cly1op25me5j4" path="res://addons/settings_system/autoloads/video_settings_applier.gd" id="2_ogp0t"]
+[ext_resource type="Script" uid="uid://q7ajmlbowcep" path="res://addons/settings_system/autoloads/audio_settings_applier.gd" id="3_bys27"]
 
 [node name="SettingsManager" type="CanvasLayer" unique_id=1432433997]
 script = ExtResource("1_qdeqy")
+
+[node name="VideoSettingsApplier" type="Node" parent="." unique_id=1987650740]
+unique_name_in_owner = true
+script = ExtResource("2_ogp0t")
+
+[node name="AudioSettingsApplier" type="Node" parent="." unique_id=988339423]
+unique_name_in_owner = true
+script = ExtResource("3_bys27")

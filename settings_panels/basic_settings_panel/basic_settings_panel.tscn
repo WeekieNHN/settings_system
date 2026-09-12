@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://6vvvu65e5uiv"]
+
+[ext_resource type="Script" uid="uid://15w4xl6scpf" path="res://addons/settings_system/settings_panels/basic_settings_panel/basic_settings_panel.gd" id="1_q5iqw"]
+[ext_resource type="PackedScene" uid="uid://cpl5or8y8nhbn" path="res://addons/settings_system/settings_elements/display_settings/display_mode/display_mode.tscn" id="2_buxkj"]
+[ext_resource type="PackedScene" uid="uid://of4dhqxt8byl" path="res://addons/settings_system/settings_elements/display_settings/resolution/resolution.tscn" id="3_fxqiu"]
+[ext_resource type="PackedScene" uid="uid://b1due4g0n5prc" path="res://addons/settings_system/settings_elements/audio_settings/master_volume/master_volume.tscn" id="4_05gw3"]
+[ext_resource type="PackedScene" uid="uid://d4cq36cdipjp" path="res://addons/settings_system/settings_elements/audio_settings/sound_effects_volume/sound_effects_volume.tscn" id="5_eultb"]
+[ext_resource type="PackedScene" uid="uid://byetw114kjvs5" path="res://addons/settings_system/settings_elements/audio_settings/music_volume/music_volume.tscn" id="6_7ggol"]
+
+[node name="SettingsPanel" type="Control" unique_id=1466188809]
+custom_minimum_size = Vector2(720, 480)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -240.0
+offset_right = 360.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q5iqw")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1713040714]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -141.0
+offset_right = 170.0
+offset_bottom = 141.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=750205373]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1932648922]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1350243443]
+layout_mode = 2
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="DisplaySettings" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=934905712]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="DisplaySettingsName" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/DisplaySettings" unique_id=96877215]
+layout_mode = 2
+text = "Display Settings"
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer/DisplaySettings" unique_id=1057092577]
+layout_mode = 2
+
+[node name="DisplayMode" parent="PanelContainer/MarginContainer/VBoxContainer/DisplaySettings" unique_id=2122326176 node_paths=PackedStringArray("resolution_setting_reference") instance=ExtResource("2_buxkj")]
+layout_mode = 2
+resolution_setting_reference = NodePath("../Resolution")
+DEFAULT_VALUE = "Windowed"
+IDENTIFIER = "Display Mode"
+
+[node name="Resolution" parent="PanelContainer/MarginContainer/VBoxContainer/DisplaySettings" unique_id=1706360175 instance=ExtResource("3_fxqiu")]
+layout_mode = 2
+DEFAULT_VALUE = "1152x648"
+IDENTIFIER = "Resolution"
+
+[node name="VolumeSettings" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=388758193]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="VolumeSettingsName" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/VolumeSettings" unique_id=1003656863]
+layout_mode = 2
+text = "Volume Settings"
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer/VolumeSettings" unique_id=1145448940]
+layout_mode = 2
+
+[node name="MasterVolume" parent="PanelContainer/MarginContainer/VBoxContainer/VolumeSettings" unique_id=2086122306 instance=ExtResource("4_05gw3")]
+layout_mode = 2
+STEP_VALUE = 0.01
+DISPLAY_PERCENT_VALUE = true
+IDENTIFIER = "Master Volume"
+
+[node name="SoundEffectsVolume" parent="PanelContainer/MarginContainer/VBoxContainer/VolumeSettings" unique_id=1909874180 instance=ExtResource("5_eultb")]
+layout_mode = 2
+STEP_VALUE = 0.01
+DISPLAY_PERCENT_VALUE = true
+IDENTIFIER = "SFX Volume"
+
+[node name="MusicVolume" parent="PanelContainer/MarginContainer/VBoxContainer/VolumeSettings" unique_id=773557267 instance=ExtResource("6_7ggol")]
+layout_mode = 2
+STEP_VALUE = 0.01
+IDENTIFIER = "Music Volume"

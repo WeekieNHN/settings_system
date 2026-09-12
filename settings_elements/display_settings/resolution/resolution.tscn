@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://of4dhqxt8byl"]
 
-[ext_resource type="Script" uid="uid://w4vshi0qi770" path="res://addons/settings/settings_panel/display_settings/resolution/resolution_setting.gd" id="1_7321a"]
+[ext_resource type="Script" uid="uid://w4vshi0qi770" path="res://addons/settings_system/settings_elements/display_settings/resolution/resolution_setting.gd" id="1_7321a"]
 
 [node name="Resolution" type="HBoxContainer" unique_id=1706360175]
 anchors_preset = 15

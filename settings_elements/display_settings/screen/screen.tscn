@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cntkcdrds5k11"]
+
+[node name="Screen" type="HBoxContainer" unique_id=2131416463]
+
+[node name="Label" type="Label" parent="." unique_id=1357261126]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Screen"
+
+[node name="OptionButton" type="OptionButton" parent="." unique_id=494316753]
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 2
+popup/item_0/text = "Screen 0"
+popup/item_0/id = 0
+popup/item_1/text = "Screen 1"
+popup/item_1/id = 1

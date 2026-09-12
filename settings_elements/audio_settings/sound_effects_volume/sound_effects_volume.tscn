@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d4cq36cdipjp"]
+
+[ext_resource type="Script" uid="uid://cdflt8qscdcrb" path="res://addons/settings_system/settings_elements/audio_settings/sound_effects_volume/sound_effects_volume.gd" id="1_rf68g"]
+
+[node name="SoundEffectsVolume" type="HBoxContainer" unique_id=1909874180 node_paths=PackedStringArray("slider_reference", "value_box_reference")]
+script = ExtResource("1_rf68g")
+slider_reference = NodePath("HBoxContainer/HSlider")
+value_box_reference = NodePath("HBoxContainer/SpinBox")
+
+[node name="Label" type="Label" parent="." unique_id=1352223774]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sound Effects Volume"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1517138041]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSlider" type="HSlider" parent="HBoxContainer" unique_id=1795290546]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="SpinBox" type="SpinBox" parent="HBoxContainer" unique_id=57597204]
+layout_mode = 2

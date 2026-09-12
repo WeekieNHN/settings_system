@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b1due4g0n5prc"]
+
+[ext_resource type="Script" uid="uid://bojrprrdilsfq" path="res://addons/settings_system/settings_elements/audio_settings/master_volume/master_volume.gd" id="1_h8d74"]
+
+[node name="MasterVolume" type="HBoxContainer" unique_id=2086122306 node_paths=PackedStringArray("slider_reference", "value_box_reference")]
+script = ExtResource("1_h8d74")
+DEFAULT_VALUE = 0.5
+slider_reference = NodePath("HBoxContainer/HSlider")
+value_box_reference = NodePath("HBoxContainer/SpinBox")
+
+[node name="Label" type="Label" parent="." unique_id=990378258]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Master Volume"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1397938246]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSlider" type="HSlider" parent="HBoxContainer" unique_id=1358278064]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="SpinBox" type="SpinBox" parent="HBoxContainer" unique_id=869320413]
+layout_mode = 2
