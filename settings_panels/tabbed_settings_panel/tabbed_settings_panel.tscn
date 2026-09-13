@@ -215,10 +215,61 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Apply"
+text = "MENU_IO_SAVE"
 
 [node name="BackButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1237207357]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Back"
+text = "MENU_LABEL_BACK"
+
+[node name="DiscardChangesPanel" type="Panel" parent="." unique_id=1069222528]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(3840, 2160)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="DiscardChangesPanel" unique_id=768759801]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="DiscardChangesPanel/CenterContainer" unique_id=91339899]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="DiscardChangesPanel/CenterContainer/PanelContainer" unique_id=563882307]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DiscardChangesPanel/CenterContainer/PanelContainer/MarginContainer" unique_id=2117557969]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="DiscardChangesPanel/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=625218947]
+layout_mode = 2
+text = "You have unsaved changes"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DiscardChangesPanel/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1894571462]
+layout_mode = 2
+
+[node name="DiscardButton" type="Button" parent="DiscardChangesPanel/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2035642223]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "CONTEXT_GAMBLING_DISCARD"
+
+[node name="KeepEditingButton" type="Button" parent="DiscardChangesPanel/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=153175131]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "MENU_LABEL_BACK"

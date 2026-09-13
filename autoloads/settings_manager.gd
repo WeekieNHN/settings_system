@@ -32,12 +32,9 @@ func _ready() -> void:
 
 	# Apply loaded settings
 	for key in _settings.keys():
-		print("set %s to %s" % [key, _settings[key]])
 		apply_setting(key, _settings[key], true)
 	for key in _default_settings.keys():
-		if !_settings.has(key): 
-			print("set %s to %s" % [key, _default_settings[key]])
-			apply_setting(key, _default_settings[key], true)
+		if !_settings.has(key): apply_setting(key, _default_settings[key], true)
 
 signal setting_applied(id: String, value: Variant)
 func apply_setting(id: String, value: Variant, first_load: bool = false) -> void:
