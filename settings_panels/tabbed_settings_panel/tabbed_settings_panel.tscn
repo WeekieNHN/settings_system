@@ -41,7 +41,7 @@ grow_vertical = 2
 [node name="TabContainer" type="TabContainer" parent="VBoxContainer" unique_id=1227077666]
 custom_minimum_size = Vector2(720, 480)
 layout_mode = 2
-current_tab = 5
+current_tab = 4
 tab_2/title = "Keyboard/Mouse"
 
 [node name="Gameplay" type="Control" parent="VBoxContainer/TabContainer" unique_id=1928651422]
@@ -70,7 +70,6 @@ mouse_filter = 2
 metadata/_tab_index = 3
 
 [node name="Display" type="Control" parent="VBoxContainer/TabContainer" unique_id=1156473046]
-visible = false
 layout_mode = 2
 mouse_filter = 2
 metadata/_tab_index = 4
@@ -137,7 +136,35 @@ layout_mode = 2
 DEFAULT_VALUE = "1152x648"
 IDENTIFIER = "Resolution"
 
+[node name="AdvancedVideoSettings" type="Label" parent="VBoxContainer/TabContainer/Display/MarginContainer/ScrollContainer/MarginContainer/SettingList/MarginContainer/DisplaySettings" unique_id=1712900345]
+layout_mode = 2
+text = "Video Settings"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/TabContainer/Display/MarginContainer/ScrollContainer/MarginContainer/SettingList/MarginContainer/DisplaySettings" unique_id=196263126]
+layout_mode = 2
+
+[node name="Max FPS" type="HBoxContainer" parent="VBoxContainer/TabContainer/Display/MarginContainer/ScrollContainer/MarginContainer/SettingList/MarginContainer/DisplaySettings" unique_id=357624787]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/TabContainer/Display/MarginContainer/ScrollContainer/MarginContainer/SettingList/MarginContainer/DisplaySettings/Max FPS" unique_id=1340371290]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Max FPS"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TabContainer/Display/MarginContainer/ScrollContainer/MarginContainer/SettingList/MarginContainer/DisplaySettings/Max FPS" unique_id=2090417332]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/TabContainer/Display/MarginContainer/ScrollContainer/MarginContainer/SettingList/MarginContainer/DisplaySettings/Max FPS/HBoxContainer" unique_id=1418369434]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/TabContainer/Display/MarginContainer/ScrollContainer/MarginContainer/SettingList/MarginContainer/DisplaySettings/Max FPS/HBoxContainer" unique_id=247556914]
+layout_mode = 2
+
 [node name="Audio" type="Control" parent="VBoxContainer/TabContainer" unique_id=711505943]
+visible = false
 layout_mode = 2
 mouse_filter = 2
 metadata/_tab_index = 5
@@ -225,6 +252,7 @@ text = "MENU_LABEL_BACK"
 
 [node name="DiscardChangesPanel" type="Panel" parent="." unique_id=1069222528]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(3840, 2160)
 layout_mode = 1
 anchors_preset = 15
